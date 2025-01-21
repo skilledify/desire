@@ -1,0 +1,19 @@
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+%title-font{
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+color: #363838;
+}
+
+$title: #363838;
+$yellow:#FFEF35;
+$default: #5A5A5A;
+$grey: #DFDFDF;

@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li {
+    margin: 0 15px;
+  }
+  button {
+    background-color: $title;
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 0;
+  }
+  li.slick-active {
+    button {
+      background-color: $yellow;
+    }
+  }
+}
+
+.breadcrumbs {
+  z-index: 10;
+  background: rgba(223, 223, 223, 0.5);
+  padding: 13px 0 14px;
+
+  &__list {
+    display: flex;
+
+    overflow-x: auto;
+  }
+  &__item {
+    position: relative;
+    padding-right: 8px;
+  }
+
+  &__item::after {
+    content: "/";
+    color: $default;
+    position: absolute;
+  }
+  &__item:last-child {
+    color: $title;
+    font-weight: 700;
+  }
+  &__item:last-child::after {
+    display: none;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $default;
+  }
+}
+
+.map {
+  margin-bottom: 55px;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  &:hover {
+    background-color: #fffff0;
+    color: #363838;
+    border: 1px solid #363838;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+//checkbox
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #a1a1a1; /* Цвет текста */
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 21px;
+}
+
+.custom-checkbox input {
+  display: none; /* Скрываем стандартный чекбокс */
+}
+
+.custom-checkbox .checkmark {
+  width: 21px;
+  height: 21px;
+  background-color: transparent; /* Прозрачный фон по умолчанию */
+  border: 2px solid #ccc; /* Серый бордер */
+  border-radius: 4px; /* Скругленные углы */
+  position: relative;
+  margin-right: 8px; /* Отступ между чекбоксом и текстом */
+  display: flex;
+  align-items: center; /* Вертикальное выравнивание */
+  justify-content: center; /* Горизонтальное выравнивание */
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #363838; /* Темный фон при активном состоянии */
+  border-color: #363838; /* Убираем выделение бордера */
+}
+
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 8px; /* Ширина галочки */
+  height: 12px; /* Высота галочки */
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg); /* Поворот галочки */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg); /* Центрирование галочки */
+  opacity: 0; /* Галочка скрыта изначально */
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  opacity: 1; /* Галочка видима при активном состоянии */
+}
