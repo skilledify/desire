@@ -138,7 +138,7 @@ function watch() {
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
-  gulp.watch(paths.images.src, img);
+  gulp.watch(paths.img.src, img);
 }
 
 // Экспорт задач
