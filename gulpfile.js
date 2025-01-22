@@ -39,7 +39,7 @@ const paths = {
     src: ["src/scripts/**/*.ts", "src/scripts/**/*.js"],
     dest: "dist/js/",
   },
-  images: {
+  img: {
     src: "src/img/**",
     dest: "dist/img/",
   },
@@ -115,15 +115,15 @@ function scripts() {
 // Сжатие изображений
 function img() {
   return gulp
-    .src(paths.images.src)
-    .pipe(newer(paths.images.dest))
+    .src(paths.img.src)
+    .pipe(newer(paths.img.dest))
     .pipe(imagemin({ progressive: true }))
     .pipe(
       size({
         showFiles: true,
       })
     )
-    .pipe(gulp.dest(paths.images.dest));
+    .pipe(gulp.dest(paths.img.dest));
 }
 
 // Наблюдение за изменениями
