@@ -56,8 +56,8 @@ function html() {
     .src(paths.html.src)
     .pipe(
       fileInclude({
-        prefix: "@@",
         basepath: "@file",
+        prefix: "@@",
       })
     )
     .pipe(htmlmin({ collapseWhitespace: true }))
