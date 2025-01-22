@@ -127,3 +127,9 @@ $(function () {
 
   // $(".js-range-slider").ionRangeSlider();
 });
+
+document.querySelector(".about-section__prev").style.backgroundImage =
+  'url("/img/about-prev-bg.jpg")';
+
+document.querySelector(".about-section__popup").style.backgroundImage =
+  'url("/img/about-popup-bg.jpg")';
