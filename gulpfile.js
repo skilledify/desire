@@ -131,7 +131,7 @@ function watch() {
   browsersync.init({
     server: {
       baseDir: "./dist",
-      files: ["dist/**/*.html"], // Следить за изменениями в HTML
+      files: ["dist/**/*.html", "dist/css/**/*.css"], // Следить за изменениями в HTML  и css
     },
   });
 
